@@ -1,23 +1,22 @@
 package co.com.sofka.Brujula.domain.generics.values;
 
-
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Email implements ValueObject<String> {
+public class Deporte implements ValueObject<String> {
     private final String value;
 
-    public Email(String value) {
+    public Deporte(String value) {
         this.value = Objects.requireNonNull(value);
         if (this.value.isBlank()) {
-            throw new IllegalArgumentException("El Email no puede estar vació");
+            throw new IllegalArgumentException("El deporte no puede estar vació");
         }
-        if (this.value.length() <= 5) {
-            throw new IllegalArgumentException("El Email debe tener minimo 5 caracteres");
+        if (this.value.length() <= 3) {
+            throw new IllegalArgumentException("El deporte debe tener minimo tres letras");
         }
-        if (!value.matches("^[^@]+@[^@]+\\.[a-zA-Z]{2,}$")) {
-            throw new IllegalArgumentException("El email no es valIdo");
+        if (this.value.length() >= 100) {
+            throw new IllegalArgumentException("El deporte debe tener menos de 100 letras");
         }
     }
 
@@ -30,8 +29,8 @@ public class Email implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Email email = (Email) o;
-        return Objects.equals(value, email.value);
+        Deporte deporte = (Deporte) o;
+        return Objects.equals(value, deporte.value);
     }
 
     @Override

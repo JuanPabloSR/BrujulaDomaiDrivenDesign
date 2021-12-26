@@ -57,7 +57,7 @@ set ERROR_CODE=0
 @REM To isolate internal variables from possible post scripts, we use another setlocal
 @setlocal
 
-@REM ==== START VALIDATION ====
+@REM ==== START VALIdATION ====
 if not "%JAVA_HOME%" == "" goto OkJHome
 
 echo.
@@ -71,14 +71,14 @@ goto error
 if exist "%JAVA_HOME%\bin\java.exe" goto init
 
 echo.
-echo Error: JAVA_HOME is set to an invalid directory. >&2
+echo Error: JAVA_HOME is set to an invalId directory. >&2
 echo JAVA_HOME = "%JAVA_HOME%" >&2
 echo Please set the JAVA_HOME variable in your environment to match the >&2
 echo location of your Java installation. >&2
 echo.
 goto error
 
-@REM ==== END VALIDATION ====
+@REM ==== END VALIdATION ====
 
 :init
 
@@ -154,7 +154,7 @@ if exist %WRAPPER_JAR% (
 )
 @REM End of extension
 
-@REM Provide a "standardized" way to retrieve the CLI args that will
+@REM ProvIde a "standardized" way to retrieve the CLI args that will
 @REM work with both Windows and non-Windows executions.
 set MAVEN_CMD_LINE_ARGS=%*
 
