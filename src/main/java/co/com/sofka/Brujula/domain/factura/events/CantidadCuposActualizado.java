@@ -4,24 +4,22 @@ import co.com.sofka.Brujula.domain.factura.values.CantidadCupos;
 import co.com.sofka.Brujula.domain.factura.values.DetalleId;
 import co.com.sofka.domain.generic.DomainEvent;
 
-import java.util.UUID;
 
 public class CantidadCuposActualizado extends DomainEvent {
-    private final DetalleId detalleId;
+    private final DetalleId entityId;
     private final CantidadCupos cantidadCupos;
 
     public CantidadCuposActualizado(DetalleId entityId, CantidadCupos cantidadCupos) {
         super("sucursalbrujula.sucursal.catidadCuposActualizada");
-        this.detalleId = entityId;
+        this.entityId = entityId;
         this.cantidadCupos = cantidadCupos;
     }
 
     public DetalleId getEntityId() {
-        return getEntityId();
+        return entityId;
     }
 
     public CantidadCupos getCantidadCupos() {
         return cantidadCupos;
     }
-
 }

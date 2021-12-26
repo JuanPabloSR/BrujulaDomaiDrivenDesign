@@ -30,7 +30,7 @@ class CalcularCostoFinalUseCaseTest {
 
     @Test
     @DisplayName("Test para validar la funcion de calcular el costo final en una factura")
-    void calcularCostoTotalDeUnaFactura() {
+    void calcularCostoFinalDeUnaFactura() {
         //arrange
         var command = new CalcularCostoFinal(
                 new FacturaId(ID_FACTURA),

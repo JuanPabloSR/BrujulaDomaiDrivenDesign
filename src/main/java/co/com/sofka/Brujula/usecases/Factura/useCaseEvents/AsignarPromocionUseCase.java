@@ -9,7 +9,7 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.business.support.TriggeredEvent;
 
 public class AsignarPromocionUseCase extends UseCase<TriggeredEvent<FacturaCreada>, ResponseEvents> {
-    private static final Double PROMOCION=50000D;
+    private static final Double PROMOCION=40000D;
     @Override
     public void executeUseCase(TriggeredEvent<FacturaCreada> facturaCreadaTriggeredEvent) {
         var event = facturaCreadaTriggeredEvent.getDomainEvent();

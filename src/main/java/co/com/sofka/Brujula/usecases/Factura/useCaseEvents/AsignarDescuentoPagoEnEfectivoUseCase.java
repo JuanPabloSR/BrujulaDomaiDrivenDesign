@@ -10,7 +10,7 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.business.support.TriggeredEvent;
 
 public class AsignarDescuentoPagoEnEfectivoUseCase extends UseCase<TriggeredEvent<FacturaCreada>, ResponseEvents> {
-    private static final double PORCENTAJE_DESCUENTO = 0.030;
+    private static final double PORCENTAJE_DESCUENTO = 0.025;
 
     @Override
     public void executeUseCase(TriggeredEvent<FacturaCreada> facturaCreadaTriggeredEvent) {
