@@ -1,4 +1,4 @@
-package co.com.sofka.Brujula.domain.factura.commands;
+package co.com.sofka.Brujula.domain.factura.events;
 
 import co.com.sofka.Brujula.domain.factura.values.ClienteId;
 import co.com.sofka.Brujula.domain.factura.values.FacturaId;
@@ -6,32 +6,21 @@ import co.com.sofka.Brujula.domain.generics.values.Celular;
 import co.com.sofka.Brujula.domain.generics.values.Edad;
 import co.com.sofka.Brujula.domain.generics.values.Email;
 import co.com.sofka.Brujula.domain.generics.values.Nombre;
-import co.com.sofka.domain.generic.Command;
+import co.com.sofka.domain.generic.DomainEvent;
 
-public class AgregarCliente extends Command {
+public class ClienteActualizado extends DomainEvent {
 
-    private final FacturaId facturaId;
-    private final ClienteId clienteId;
     private final Nombre nombre;
     private final Edad edad;
     private final Celular celular;
     private final Email email;
 
-    public AgregarCliente(FacturaId entityId, ClienteId clienteId, Nombre nombre, Edad edad, Celular celular, Email email) {
-        this.facturaId = entityId;
-        this.clienteId = clienteId;
+    public ClienteActualizado(Nombre nombre, Edad edad, Celular celular, Email email) {
+        super("sucursalbrujula.sucursal.clienteActualizado");
         this.nombre = nombre;
         this.edad = edad;
         this.celular = celular;
         this.email = email;
-    }
-
-    public FacturaId getFacturaId() {
-        return facturaId;
-    }
-
-    public ClienteId getClienteId() {
-        return clienteId;
     }
 
     public Nombre getNombre() {
@@ -45,7 +34,6 @@ public class AgregarCliente extends Command {
     public Celular getCelular() {
         return celular;
     }
-
 
     public Email getEmail() {
         return email;

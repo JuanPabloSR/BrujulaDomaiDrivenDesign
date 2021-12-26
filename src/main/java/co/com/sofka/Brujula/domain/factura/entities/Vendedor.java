@@ -4,7 +4,6 @@ import co.com.sofka.Brujula.domain.factura.values.FacturaId;
 import co.com.sofka.Brujula.domain.factura.values.VendedorId;
 import co.com.sofka.Brujula.domain.generics.values.Celular;
 import co.com.sofka.Brujula.domain.generics.values.Edad;
-import co.com.sofka.Brujula.domain.generics.values.Email;
 import co.com.sofka.Brujula.domain.generics.values.Nombre;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.SucursalBrujulaId;
 import co.com.sofka.domain.generic.Entity;
