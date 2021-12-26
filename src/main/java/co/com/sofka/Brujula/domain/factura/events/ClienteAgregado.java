@@ -23,4 +23,24 @@ public class ClienteAgregado extends DomainEvent {
         this.celular = celular;
         this.email = email;
     }
+
+    public ClienteId getClienteId() {
+        return clienteId;
+    }
+
+    public Nombre getNombre() {
+        return nombre;
+    }
+
+    public Edad getEdad() {
+        return edad;
+    }
+
+    public Celular getCelular() {
+        return celular;
+    }
+
+    public Email getEmail() {
+        return email;
+    }
 }

@@ -9,27 +9,23 @@ import co.com.sofka.Brujula.domain.sucursalBrujula.values.SucursalBrujulaId;
 import co.com.sofka.domain.generic.Entity;
 
 public class Vendedor extends Entity<VendedorId> {
-    private  FacturaId facturaId;
     private  SucursalBrujulaId sucursalBrujulaId;
     private  VendedorId vendedorId;
     private  Nombre nombre;
     private  Edad edad;
     private  Celular celular;
 
-    public Vendedor(VendedorId entityId, FacturaId facturaId, SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, Nombre nombre, Edad edad, Celular celular) {
+    public Vendedor(SucursalBrujulaId sucursalBrujulaId, VendedorId entityId, Nombre nombre, Edad edad, Celular celular) {
         super(entityId);
-        this.facturaId = facturaId;
-        this.sucursalBrujulaId = sucursalBrujulaId;
-        this.vendedorId = vendedorId;
         this.nombre = nombre;
         this.edad = edad;
         this.celular = celular;
     }
 
+
     public void actualizarSucursalBrujulaId(SucursalBrujulaId sucursalBrujulaId) {
         this.sucursalBrujulaId = sucursalBrujulaId;
     }
-
     public void actualizarNombre(Nombre nombre) {
         this.nombre = nombre;
     }
@@ -42,4 +38,24 @@ public class Vendedor extends Entity<VendedorId> {
         this.celular = celular;
     }
 
+
+    public SucursalBrujulaId SucursalBrujulaId() {
+        return sucursalBrujulaId;
+    }
+
+    public VendedorId VendedorId() {
+        return vendedorId;
+    }
+
+    public Nombre Nombre() {
+        return nombre;
+    }
+
+    public Edad Edad() {
+        return edad;
+    }
+
+    public Celular Celular() {
+        return celular;
+    }
 }

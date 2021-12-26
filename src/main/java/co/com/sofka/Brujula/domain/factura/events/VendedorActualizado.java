@@ -9,15 +9,15 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class VendedorActualizado extends DomainEvent {
     private final SucursalBrujulaId sucursalBrujulaId;
-    private final VendedorId vendedorId;
+    private final VendedorId entityId;
     private final Nombre nombre;
     private final Edad edad;
     private final Celular celular;
 
-    public VendedorActualizado(SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, Nombre nombre, Edad edad, Celular celular) {
+    public VendedorActualizado(SucursalBrujulaId sucursalBrujulaId, VendedorId entityId, Nombre nombre, Edad edad, Celular celular) {
         super("sucursalbrujula.sucursal.vendedorAgregado");
         this.sucursalBrujulaId = sucursalBrujulaId;
-        this.vendedorId = vendedorId;
+        this.entityId = entityId;
         this.nombre = nombre;
         this.edad = edad;
         this.celular = celular;
@@ -27,8 +27,8 @@ public class VendedorActualizado extends DomainEvent {
         return sucursalBrujulaId;
     }
 
-    public VendedorId getVendedorId() {
-        return vendedorId;
+    public VendedorId getEntityId() {
+        return entityId;
     }
 
     public Nombre getNombre() {

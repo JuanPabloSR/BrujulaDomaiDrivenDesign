@@ -10,17 +10,18 @@ public class CantidadCuposActualizado extends DomainEvent {
     private final DetalleId detalleId;
     private final CantidadCupos cantidadCupos;
 
-    public CantidadCuposActualizado(DetalleId detalleId, CantidadCupos cantidadCupos) {
+    public CantidadCuposActualizado(DetalleId entityId, CantidadCupos cantidadCupos) {
         super("sucursalbrujula.sucursal.catidadCuposActualizada");
-        this.detalleId = detalleId;
+        this.detalleId = entityId;
         this.cantidadCupos = cantidadCupos;
     }
 
-    public DetalleId getDetalleId() {
-        return detalleId;
+    public DetalleId getEntityId() {
+        return getEntityId();
     }
 
     public CantidadCupos getCantidadCupos() {
         return cantidadCupos;
     }
+
 }

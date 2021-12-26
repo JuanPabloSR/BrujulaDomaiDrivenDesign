@@ -10,4 +10,8 @@ public class CostoFinalCalculado extends DomainEvent {
         super("sucursalbrujula.sucursal.costoFinalCalculado");
         this.costoFinal = costoFinal;
     }
+
+    public CostoFinal getCostoFinal() {
+        return costoFinal;
+    }
 }

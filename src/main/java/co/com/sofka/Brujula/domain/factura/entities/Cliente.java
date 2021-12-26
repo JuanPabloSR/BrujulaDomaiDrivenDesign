@@ -14,7 +14,7 @@ public class Cliente extends Entity<ClienteId> {
     private Celular celular;
     private Email email;
 
-    public Cliente(ClienteId entityId, ClienteId clienteId, Nombre nombre, Edad edad, Celular celular, Email email) {
+    public Cliente(ClienteId entityId, Nombre nombre, Edad edad, Celular celular, Email email) {
         super(entityId);
         this.clienteId = clienteId;
         this.nombre = nombre;
@@ -22,6 +22,7 @@ public class Cliente extends Entity<ClienteId> {
         this.celular = celular;
         this.email = email;
     }
+
 
     public void actualizarNombre(Nombre nombre) {
         this.nombre = nombre;
@@ -38,24 +39,23 @@ public class Cliente extends Entity<ClienteId> {
         this.email = email;
     }
 
-
-    public ClienteId ClienteId() {
+    public ClienteId clienteId() {
         return clienteId;
     }
 
-    public Nombre Nombre() {
+    public Nombre getNombre() {
         return nombre;
     }
 
-    public Edad Edad() {
+    public Edad getEdad() {
         return edad;
     }
 
-    public Celular Celular() {
+    public Celular getCelular() {
         return celular;
     }
 
-    public Email Email() {
+    public Email getEmail() {
         return email;
     }
 }

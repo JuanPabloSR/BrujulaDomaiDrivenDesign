@@ -1,7 +1,7 @@
 package co.com.sofka.Brujula.domain.factura.events;
 
+import co.com.sofka.Brujula.domain.factura.values.MetodoPago;
 import co.com.sofka.Brujula.domain.generics.values.Fecha;
-import co.com.sofka.Brujula.domain.generics.values.MetodoPago;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class FacturaCreada extends DomainEvent {
@@ -13,6 +13,7 @@ public class FacturaCreada extends DomainEvent {
         this.fecha = fecha;
         this.metodoPago = metodoPago;
     }
+
 
     public Fecha getFecha() {
         return fecha;

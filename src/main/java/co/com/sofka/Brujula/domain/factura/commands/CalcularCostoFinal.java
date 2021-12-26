@@ -1,5 +1,6 @@
 package co.com.sofka.Brujula.domain.factura.commands;
 
+import co.com.sofka.Brujula.domain.factura.values.CostoFinal;
 import co.com.sofka.Brujula.domain.factura.values.FacturaId;
 import co.com.sofka.domain.generic.Command;
 

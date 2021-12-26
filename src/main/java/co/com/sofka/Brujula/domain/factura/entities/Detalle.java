@@ -10,7 +10,7 @@ public class Detalle extends Entity<DetalleId> {
     private Deporte deporte;
     private CantidadCupos cantidadCupos;
 
-    public Detalle(DetalleId entityId, DetalleId detalleId, Deporte deporte, CantidadCupos cantidadCupos) {
+    public Detalle(DetalleId entityId, Deporte deporte, CantidadCupos cantidadCupos) {
         super(entityId);
         this.detalleId = detalleId;
         this.deporte = deporte;
