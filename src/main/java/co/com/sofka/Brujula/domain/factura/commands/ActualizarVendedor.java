@@ -16,7 +16,7 @@ public class ActualizarVendedor extends Command {
     private final Edad edad;
     private final Celular celular;
 
-    public ActualizarVendedor(FacturaId facturaId, SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, Nombre nombre, Edad edad, Celular celular) {
+    public ActualizarVendedor(FacturaId facturaId, SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, FacturaId id, Nombre nombre, Edad edad, Celular celular) {
         this.facturaId = facturaId;
         this.sucursalBrujulaId = sucursalBrujulaId;
         this.vendedorId = vendedorId;

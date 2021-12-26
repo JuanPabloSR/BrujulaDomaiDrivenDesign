@@ -16,7 +16,7 @@ public class AgregarVendedor extends Command {
     private final Edad edad;
     private final Celular celular;
 
-    public AgregarVendedor(FacturaId facturaId, SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, Nombre nombre, Edad edad, Celular celular) {
+    public AgregarVendedor(FacturaId facturaId, SucursalBrujulaId sucursalBrujulaId, VendedorId vendedorId, SucursalBrujulaId brujulaId, Nombre nombre, Edad edad, Celular celular) {
         this.facturaId = facturaId;
         this.sucursalBrujulaId = sucursalBrujulaId;
         this.vendedorId = vendedorId;
