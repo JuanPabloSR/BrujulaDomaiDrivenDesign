@@ -115,4 +115,7 @@ public class RegistroVentas extends AggregateEvent<VentaId> {
 
     public void ActualizarCargo(Cargo cargo) {
     }
+
+    public void AgregarServiciosExtras(Servicio servicio, ValorServicio valorServicio) {
+    }
 }
