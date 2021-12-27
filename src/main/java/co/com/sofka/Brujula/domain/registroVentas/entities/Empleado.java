@@ -10,20 +10,23 @@ import co.com.sofka.Brujula.domain.registroVentas.values.VentaId;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.SucursalBrujulaId;
 import co.com.sofka.domain.generic.Entity;
 
-public class Empleado extends Entity<VendedorId> {
+public class Empleado extends Entity<EmpleadoId> {
     private VentaId ventaId;
     private EmpleadoId empleadoId;
     private Nombre nombre;
     private Celular celular;
     private Cargo cargo;
 
-    public Empleado(VendedorId entityId, VentaId ventaId, EmpleadoId empleadoId, Nombre nombre, Celular celular, Cargo cargo) {
+    public Empleado(VentaId ventaId, EmpleadoId entityId, Nombre nombre, Celular celular, Cargo cargo) {
         super(entityId);
-        this.ventaId = ventaId;
         this.empleadoId = empleadoId;
         this.nombre = nombre;
         this.celular = celular;
         this.cargo = cargo;
+    }
+
+    public void actualizarVentaId(VentaId ventaId) {
+        this.ventaId = ventaId;
     }
 
     public void actualizarNombre(Nombre nombre) {

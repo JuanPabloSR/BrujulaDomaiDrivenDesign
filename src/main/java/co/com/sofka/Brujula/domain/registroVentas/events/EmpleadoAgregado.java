@@ -7,6 +7,7 @@ import co.com.sofka.Brujula.domain.generics.values.Email;
 import co.com.sofka.Brujula.domain.generics.values.Nombre;
 import co.com.sofka.Brujula.domain.registroVentas.values.Cargo;
 import co.com.sofka.Brujula.domain.registroVentas.values.EmpleadoId;
+import co.com.sofka.Brujula.domain.registroVentas.values.VentaId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class EmpleadoAgregado extends DomainEvent {
@@ -38,4 +39,5 @@ public class EmpleadoAgregado extends DomainEvent {
     public Cargo getCargo() {
         return cargo;
     }
+
 }

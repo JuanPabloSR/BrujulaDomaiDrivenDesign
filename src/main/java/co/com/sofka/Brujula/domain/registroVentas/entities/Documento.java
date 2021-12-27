@@ -11,19 +11,18 @@ import co.com.sofka.Brujula.domain.registroVentas.values.SeguroRiesgos;
 import co.com.sofka.Brujula.domain.registroVentas.values.VentaId;
 import co.com.sofka.domain.generic.Entity;
 
-public class Documentos extends Entity<ClienteId> {
-    private  VentaId ventaId;
+public class Documento extends Entity<DocumentosId> {
     private  DocumentosId documentosId;
     private  Cedula cedula;
     private  SeguroRiesgos seguroRiesgos;
 
-    public Documentos(ClienteId entityId, VentaId ventaId, DocumentosId documentosId, Cedula cedula, SeguroRiesgos seguroRiesgos) {
+    public Documento(DocumentosId entityId, Cedula cedula, SeguroRiesgos seguroRiesgos) {
         super(entityId);
-        this.ventaId = ventaId;
         this.documentosId = documentosId;
         this.cedula = cedula;
         this.seguroRiesgos = seguroRiesgos;
     }
+
 
     public void actualizarCedula(Cedula cedula) {
         this.cedula = cedula;
@@ -31,10 +30,6 @@ public class Documentos extends Entity<ClienteId> {
 
     public void actualizarSeguroRiesgos(SeguroRiesgos seguroRiesgos) {
         this.seguroRiesgos = seguroRiesgos;
-    }
-
-    public VentaId getVentaId() {
-        return ventaId;
     }
 
     public DocumentosId getDocumentosId() {

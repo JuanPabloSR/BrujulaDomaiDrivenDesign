@@ -9,14 +9,14 @@ import co.com.sofka.Brujula.domain.registroVentas.values.ValorServicio;
 import co.com.sofka.Brujula.domain.registroVentas.values.VentaId;
 import co.com.sofka.domain.generic.Entity;
 
-public class ServiciosExtras extends Entity<DetalleId> {
+public class ServiciosExtras extends Entity<ServiciosExtraId> {
     private  VentaId ventaId;
     private  ServiciosExtraId serviciosExtraId;
     private  Servicio servicio;
     private  ValorServicio valorServicio;
 
-    public ServiciosExtras(DetalleId entityId, VentaId ventaId, ServiciosExtraId serviciosExtraId, Servicio servicio, ValorServicio valorServicio) {
-        super(entityId);
+    public ServiciosExtras(ServiciosExtraId serviciosExtraId, Servicio servicio, ValorServicio valorServicio) {
+        super(serviciosExtraId);
         this.ventaId = ventaId;
         this.serviciosExtraId = serviciosExtraId;
         this.servicio = servicio;

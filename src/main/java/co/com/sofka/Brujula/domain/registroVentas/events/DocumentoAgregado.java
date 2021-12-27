@@ -8,12 +8,12 @@ import co.com.sofka.Brujula.domain.registroVentas.values.DocumentosId;
 import co.com.sofka.Brujula.domain.registroVentas.values.SeguroRiesgos;
 import co.com.sofka.domain.generic.DomainEvent;
 
-public class DocumentosAgregados extends DomainEvent {
+public class DocumentoAgregado extends DomainEvent {
     private final DocumentosId documentosId;
     private final Cedula cedula;
     private final SeguroRiesgos seguroRiesgos;
 
-    public DocumentosAgregados(DocumentosId documentosId, Cedula cedula, SeguroRiesgos seguroRiesgos) {
+    public DocumentoAgregado(DocumentosId documentosId, Cedula cedula, SeguroRiesgos seguroRiesgos) {
         super("sucursalbrujula.sucursal.documentosAgregados");
         this.documentosId = documentosId;
         this.cedula = cedula;
