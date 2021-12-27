@@ -1,22 +1,21 @@
-package co.com.sofka.Brujula.domain.sucursalBrujula.values;
+package co.com.sofka.Brujula.domain.registroVentas.values;
 
-import co.com.sofka.Brujula.domain.generics.values.Edad;
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class EdadMinima implements ValueObject<Integer> {
-    private final Integer value;
+public class ValorTotal implements ValueObject<Double> {
+    private final Double value;
 
-    public EdadMinima(Integer value) {
+    public ValorTotal(Double value) {
         this.value = Objects.requireNonNull(value);
-        if (this.value.intValue() <= 5) {
-            throw new IllegalArgumentException("La edad minima debe ser igual o mayor a 5 años");
+        if (this.value <= 0) {
+            throw new IllegalArgumentException("El valor total no puede ser menor a cero");
         }
     }
 
     @Override
-    public Integer value() {
+    public Double value() {
         return value;
     }
 
@@ -24,7 +23,7 @@ public class EdadMinima implements ValueObject<Integer> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        EdadMinima that = (EdadMinima) o;
+        ValorTotal that = (ValorTotal) o;
         return Objects.equals(value, that.value);
     }
 
