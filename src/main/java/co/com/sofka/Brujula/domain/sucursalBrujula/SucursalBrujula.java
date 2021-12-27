@@ -58,12 +58,12 @@ public class SucursalBrujula extends AggregateEvent<SucursalBrujulaId> {
         appendChange(new ActividadAgregada(sucursalBrujulaId, actividadId, deporte, valorPorPersona, rangoDePeligro,edadMinima)).apply();
     }
 
-    public void agregarPlanes(PlanId planesId, NombrePlan nombrePlan, ValorPlan valorPlan, CuposMaximos cuposMaximos) {
-        Objects.requireNonNull(planesId);
+    public void agregarPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planId, NombrePlan nombrePlan, ValorPlan valorPlan, CuposMaximos cuposMaximos) {
+        Objects.requireNonNull(planId);
         Objects.requireNonNull(nombrePlan);
         Objects.requireNonNull(valorPlan);
         Objects.requireNonNull(cuposMaximos);
-        appendChange(new PlanAgregado(planesId, nombrePlan, valorPlan, cuposMaximos)).apply();
+        appendChange(new PlanAgregado(planId, nombrePlan, valorPlan, cuposMaximos)).apply();
     }
 
     public void agregarFactura(FacturaId facturaId){

@@ -40,6 +40,7 @@ public class SucursalBrujulaChange extends EventChange {
         apply((ActividadAgregada event) -> {
             sucursalBrujula.actividades.add(new Actividad(
                     event.getActividadId(),
+                    event.getSucursalBrujulaId(),
                     event.getDeporte(),
                     event.getValorPorPersona(),
                     event.getRangoDePeligro(),
@@ -70,8 +71,8 @@ public class SucursalBrujulaChange extends EventChange {
         });
 
         apply((ValorPlanActualizado event) -> {
-            var plan = sucursalBrujula.obtenerPlanesPorId(event.getPlanesId())
-                    .orElseThrow(() -> new IllegalArgumentException("No existe ningún plan con el id " + event.getPlanesId()));
+            var plan = sucursalBrujula.obtenerPlanesPorId(event.getPlanId())
+                    .orElseThrow(() -> new IllegalArgumentException("No existe ningún plan con el id " + event.getPlanId()));
             plan.actualizarValorPlan(event.getValorPlan());
         });
 

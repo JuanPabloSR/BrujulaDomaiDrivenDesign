@@ -5,14 +5,14 @@ import co.com.sofka.Brujula.domain.sucursalBrujula.values.*;
 import co.com.sofka.domain.generic.Command;
 
 public class AgregarActividad extends Command {
-    private final SucursalBrujulaId sucursalBrujulaId;
     private final ActividadId actividadId;
+    private final SucursalBrujulaId sucursalBrujulaId;
     private final Deporte deporte;
     private final ValorPorPersona valorPorPersona;
     private final RangoDePeligro rangoDePeligro;
     private final EdadMinima edadMinima;
 
-    public AgregarActividad(SucursalBrujulaId sucursalBrujulaId, ActividadId actividadId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
+    public AgregarActividad(ActividadId actividadId, SucursalBrujulaId sucursalBrujulaId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
         this.sucursalBrujulaId = sucursalBrujulaId;
         this.actividadId = actividadId;
         this.deporte = deporte;

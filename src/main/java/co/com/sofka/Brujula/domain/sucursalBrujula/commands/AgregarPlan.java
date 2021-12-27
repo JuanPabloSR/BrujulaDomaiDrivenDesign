@@ -5,14 +5,14 @@ import co.com.sofka.domain.generic.Command;
 
 public class AgregarPlan extends Command {
     private final SucursalBrujulaId sucursalBrujulaId;
-    private final PlanId planesId;
+    private final PlanId planId;
     private final NombrePlan nombrePlan;
     private final ValorPlan valorPlan;
     private final CuposMaximos cuposMaximos;
 
-    public AgregarPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planesId, NombrePlan nombrePlan, ValorPlan valorPlan, CuposMaximos cuposMaximos) {
+    public AgregarPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planId, NombrePlan nombrePlan, ValorPlan valorPlan, CuposMaximos cuposMaximos) {
         this.sucursalBrujulaId = sucursalBrujulaId;
-        this.planesId = planesId;
+        this.planId = planId;
         this.nombrePlan = nombrePlan;
         this.valorPlan = valorPlan;
         this.cuposMaximos = cuposMaximos;
@@ -22,8 +22,8 @@ public class AgregarPlan extends Command {
         return sucursalBrujulaId;
     }
 
-    public PlanId getPlanesId() {
-        return planesId;
+    public PlanId getPlanId() {
+        return planId;
     }
 
     public NombrePlan getNombrePlan() {

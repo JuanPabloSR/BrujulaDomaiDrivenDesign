@@ -6,14 +6,16 @@ import co.com.sofka.domain.generic.Entity;
 
 public class Actividad extends Entity<ActividadId> {
     private ActividadId actividadId;
+    private SucursalBrujulaId sucursalBrujulaId;
     private Deporte deporte;
     private ValorPorPersona valorPorPersona;
     private RangoDePeligro rangoDePeligro;
     private EdadMinima edadMinima;
 
-    public Actividad(ActividadId entityId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
+    public Actividad(ActividadId entityId, SucursalBrujulaId sucursalBrujulaId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
         super(entityId);
         this.actividadId = actividadId;
+        this.sucursalBrujulaId = sucursalBrujulaId;
         this.deporte = deporte;
         this.valorPorPersona = valorPorPersona;
         this.rangoDePeligro = rangoDePeligro;

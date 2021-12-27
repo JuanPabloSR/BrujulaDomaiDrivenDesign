@@ -7,12 +7,12 @@ import co.com.sofka.domain.generic.Command;
 
 public class ActualizarValorPlan extends Command {
     private final SucursalBrujulaId sucursalBrujulaId;
-    private final PlanId planesId;
+    private final PlanId planId;
     private final ValorPlan valorPlan;
 
-    public ActualizarValorPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planesId, ValorPlan valorPlan) {
+    public ActualizarValorPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planId, ValorPlan valorPlan) {
         this.sucursalBrujulaId = sucursalBrujulaId;
-        this.planesId = planesId;
+        this.planId = planId;
         this.valorPlan = valorPlan;
     }
 

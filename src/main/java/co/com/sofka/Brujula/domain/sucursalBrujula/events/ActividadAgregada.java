@@ -22,6 +22,7 @@ public class ActividadAgregada extends DomainEvent {
         this.edadMinima = edadMinima;
     }
 
+
     public SucursalBrujulaId getSucursalBrujulaId() {
         return sucursalBrujulaId;
     }

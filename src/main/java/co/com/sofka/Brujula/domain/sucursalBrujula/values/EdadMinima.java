@@ -10,7 +10,7 @@ public class EdadMinima implements ValueObject<Integer> {
 
     public EdadMinima(Integer value) {
         this.value = Objects.requireNonNull(value);
-        if (this.value >= 5) {
+        if (this.value <= 5) {
             throw new IllegalArgumentException("La edad minima debe ser igual o mayor a 5 años");
         }
     }
