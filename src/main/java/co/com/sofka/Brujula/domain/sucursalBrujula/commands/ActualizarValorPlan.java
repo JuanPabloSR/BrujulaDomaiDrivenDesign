@@ -20,8 +20,8 @@ public class ActualizarValorPlan extends Command {
         return sucursalBrujulaId;
     }
 
-    public PlanId getPlanesId() {
-        return planesId;
+    public PlanId getPlanId() {
+        return planId;
     }
 
     public ValorPlan getValorPlan() {

@@ -33,7 +33,7 @@ public class SucursalBrujula extends AggregateEvent<SucursalBrujulaId> {
         super(entityId);
         subscribe(new SucursalBrujulaChange(this));
     }
-    
+
 
     public static SucursalBrujula from(SucursalBrujulaId entityId, List<DomainEvent> events) {
         SucursalBrujula sucursalBrujula = new SucursalBrujula(entityId);
