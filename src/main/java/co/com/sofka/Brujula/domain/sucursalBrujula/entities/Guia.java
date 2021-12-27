@@ -14,7 +14,7 @@ public class Guia extends Entity<GuiaId> {
     private Celular celular;
     private DeportePrincipal deportePrincipal;
 
-    public Guia(GuiaId entityId, SucursalBrujulaId sucursalBrujulaId, GuiaId guiaId, Nombre nombre, Celular celular, DeportePrincipal deportePrincipal) {
+    public Guia(SucursalBrujulaId sucursalBrujulaId, GuiaId entityId, Nombre nombre, Celular celular, DeportePrincipal deportePrincipal) {
         super(entityId);
         this.sucursalBrujulaId = sucursalBrujulaId;
         this.guiaId = guiaId;

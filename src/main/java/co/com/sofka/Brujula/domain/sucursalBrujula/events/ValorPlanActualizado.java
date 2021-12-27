@@ -1,21 +1,21 @@
 package co.com.sofka.Brujula.domain.sucursalBrujula.events;
 
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.PlanesId;
+import co.com.sofka.Brujula.domain.sucursalBrujula.values.PlanId;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.ValorPlan;
 import co.com.sofka.domain.generic.DomainEvent;
 
 
 public class ValorPlanActualizado extends DomainEvent {
-    private final PlanesId planesId;
+    private final PlanId planesId;
     private final ValorPlan valorPlan;
 
-    public ValorPlanActualizado(PlanesId planesId, ValorPlan valorPlan) {
+    public ValorPlanActualizado(PlanId planesId, ValorPlan valorPlan) {
         super("sucursalbrujula.sucursal.valorPlanActualizado");
         this.planesId = planesId;
         this.valorPlan = valorPlan;
     }
 
-    public PlanesId getPlanesId() {
+    public PlanId getPlanesId() {
         return planesId;
     }
 

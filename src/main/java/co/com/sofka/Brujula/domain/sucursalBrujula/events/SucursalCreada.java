@@ -3,11 +3,11 @@ package co.com.sofka.Brujula.domain.sucursalBrujula.events;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.NombreSucursal;
 import co.com.sofka.domain.generic.DomainEvent;
 
-public class SucursalAgregada extends DomainEvent {
+public class SucursalCreada extends DomainEvent {
     private final NombreSucursal nombreSucursal;
 
-    public SucursalAgregada(NombreSucursal nombreSucursal) {
-        super("sucursalbrujula.sucursal.sucursalAgregada");
+    public SucursalCreada(NombreSucursal nombreSucursal) {
+        super("sucursalbrujula.sucursal.sucursalCreada");
         this.nombreSucursal = nombreSucursal;
     }
 

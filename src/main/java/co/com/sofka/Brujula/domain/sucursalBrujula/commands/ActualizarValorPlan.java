@@ -1,16 +1,16 @@
 package co.com.sofka.Brujula.domain.sucursalBrujula.commands;
 
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.PlanesId;
+import co.com.sofka.Brujula.domain.sucursalBrujula.values.PlanId;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.SucursalBrujulaId;
 import co.com.sofka.Brujula.domain.sucursalBrujula.values.ValorPlan;
 import co.com.sofka.domain.generic.Command;
 
 public class ActualizarValorPlan extends Command {
     private final SucursalBrujulaId sucursalBrujulaId;
-    private final PlanesId planesId;
+    private final PlanId planesId;
     private final ValorPlan valorPlan;
 
-    public ActualizarValorPlan(SucursalBrujulaId sucursalBrujulaId, PlanesId planesId, ValorPlan valorPlan) {
+    public ActualizarValorPlan(SucursalBrujulaId sucursalBrujulaId, PlanId planesId, ValorPlan valorPlan) {
         this.sucursalBrujulaId = sucursalBrujulaId;
         this.planesId = planesId;
         this.valorPlan = valorPlan;
@@ -20,7 +20,7 @@ public class ActualizarValorPlan extends Command {
         return sucursalBrujulaId;
     }
 
-    public PlanesId getPlanesId() {
+    public PlanId getPlanesId() {
         return planesId;
     }
 

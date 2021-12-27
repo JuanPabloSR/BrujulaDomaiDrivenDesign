@@ -1,10 +1,7 @@
 package co.com.sofka.Brujula.domain.sucursalBrujula.entities;
 
 import co.com.sofka.Brujula.domain.generics.values.Deporte;
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.ActividadId;
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.EdadMinima;
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.RangoDePeligro;
-import co.com.sofka.Brujula.domain.sucursalBrujula.values.ValorPorPersona;
+import co.com.sofka.Brujula.domain.sucursalBrujula.values.*;
 import co.com.sofka.domain.generic.Entity;
 
 public class Actividad extends Entity<ActividadId> {
@@ -14,7 +11,7 @@ public class Actividad extends Entity<ActividadId> {
     private RangoDePeligro rangoDePeligro;
     private EdadMinima edadMinima;
 
-    public Actividad(ActividadId entityId, ActividadId actividadId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
+    public Actividad(ActividadId entityId, Deporte deporte, ValorPorPersona valorPorPersona, RangoDePeligro rangoDePeligro, EdadMinima edadMinima) {
         super(entityId);
         this.actividadId = actividadId;
         this.deporte = deporte;
@@ -23,13 +20,19 @@ public class Actividad extends Entity<ActividadId> {
         this.edadMinima = edadMinima;
     }
 
-    public void actualizarDeporte (Deporte deporte) {
+    public void actualizarDeporte(Deporte deporte) {
         this.deporte = deporte;
     }
-    public void RangoDePeligro (RangoDePeligro rangoDePeligro) {
+
+    public void actualizarValorPorPersona(ValorPorPersona valorPorPersona) {
+        this.valorPorPersona = valorPorPersona;
+    }
+
+    public void actualizarRangoDePeligro(RangoDePeligro rangoDePeligro) {
         this.rangoDePeligro = rangoDePeligro;
     }
-    public void EdadMinima (EdadMinima edadMinima) {
+
+    public void actualizarEdadMinima(EdadMinima edadMinima) {
         this.edadMinima = edadMinima;
     }
 
